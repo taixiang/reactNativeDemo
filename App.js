@@ -9,6 +9,7 @@
 import React, {Component} from 'react';
 import {Image, Platform, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import Rain from "./src/component/Rain";
+import AppStackNavigator from "./src/router/AppStackNavigator";
 
 type Props = {};
 
@@ -35,16 +36,10 @@ const imgs = [
 
 export default class App extends Component<Props> {
 
-
-
   render() {
     return (
       <View style={styles.container}>
-        <Rain
-            imgs={imgs}
-            count={35}
-            duration={1500}>
-        </Rain>
+        <AppStackNavigator/>
       </View>
     );
   }
@@ -53,9 +48,7 @@ export default class App extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#f5f5f5',
   },
   welcome: {
     fontSize: 20,
